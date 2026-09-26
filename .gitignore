@@ -1,34 +1,37 @@
-# Gradle files
+# Gradle / Android
 .gradle/
 build/
-
-# Local configuration file (sdk path, etc)
+app/build/
+app/.cxx/
+.kotlin/
 local.properties
-
-# Log/OS Files
-*.log
-
-# Android Studio generated files and folders
-captures/
-.externalNativeBuild/
-.cxx/
-*.aab
-*.apk
-output-metadata.json
-
-# IntelliJ
 *.iml
 .idea/
-misc.xml
-deploymentTargetDropDown.xml
-render.experimental.xml
+captures/
 
-# Keystore files
+# 签名密钥：绝不入库
+keystore/
 *.jks
 *.keystore
 
-# Google Services (e.g. APIs or Firebase)
-google-services.json
+# 构建产物
+*.apk
+*.aab
+*.so
+*.a
 
-# Android Profiling
-*.hprof
+# 本地构建目录（llama.cpp / Vulkan 头文件 / 产物）
+llama.cpp/
+llama-build-*/
+vulkan-sdk/
+Vulkan-Headers/
+SPIRV-Headers/
+work/
+outputs/
+
+# 模型文件（体积大，走 Releases 或下载功能）
+*.gguf
+
+# 系统
+.DS_Store
+Thumbs.db
